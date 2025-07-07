@@ -7,8 +7,8 @@ import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
 
 export const useBlobUrl = ({ authorDid }: { authorDid: string }) => {
   const { appview } = useServerConfig()
-  const cdnUrl = appview?.endsWith('.bsky.app')
-    ? 'https://cdn.bsky.app'
+  const cdnUrl = appview?.endsWith('.gndr.app')
+    ? 'https://cdn.gndr.app'
     : appview
 
   return useCallback(

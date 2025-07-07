@@ -20,19 +20,19 @@ export const SOCIAL_APP_URL =
   process.env.NEXT_PUBLIC_SOCIAL_APP_URL ||
   (process.env.NODE_ENV === 'development'
     ? 'http://localhost:2584'
-    : 'https://bsky.app')
+    : 'https://gndr.app')
 
 export const HANDLE_RESOLVER_URL =
   process.env.NEXT_PUBLIC_HANDLE_RESOLVER_URL ||
   (process.env.NODE_ENV === 'development'
     ? 'http://localhost:2584'
-    : 'https://api.bsky.app')
+    : 'https://api.gndr.app')
 
 export const DM_DISABLE_TAG = 'chat-disabled'
 export const VIDEO_UPLOAD_DISABLE_TAG = 'video-upload-disabled'
 export const TRUSTED_VERIFIER_TAG = 'trusted-verifier'
 
-export const STARTER_PACK_OG_CARD_URL = `https://ogcard.cdn.bsky.app/start`
+export const STARTER_PACK_OG_CARD_URL = `https://ogcard.cdn.gndr.app/start`
 
 export const NEW_ACCOUNT_MARKER_THRESHOLD_IN_DAYS = process.env
   .NEXT_PUBLIC_NEW_ACCOUNT_MARKER_THRESHOLD_IN_DAYS

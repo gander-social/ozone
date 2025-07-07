@@ -1,7 +1,7 @@
 export const API_URL = 'http://localhost:2583'
 export const SERVER_URL = `${API_URL}/xrpc`
 export const PLC_URL = 'https://plc.directory'
-export const HANDLE_RESOLVER_URL = 'https://api.bsky.app/xrpc'
+export const HANDLE_RESOLVER_URL = 'https://api.gndr.app/xrpc'
 
 export const mockAuthResponse = (response: Record<string, any>) =>
   cy.intercept(
@@ -62,7 +62,7 @@ export const mockProfileResponse = (response: {
 }) =>
   cy.intercept(
     'GET',
-    `${SERVER_URL}/app.bsky.actor.getProfile?actor=${encodeURIComponent(
+    `${SERVER_URL}/app.gndr.actor.getProfile?actor=${encodeURIComponent(
       response.body.did,
     )}`,
     response,

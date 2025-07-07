@@ -18,7 +18,7 @@ const useMessageContext = ({ messageId, did }) => {
     queryKey: ['messageContext', { messageId }],
     queryFn: async () => {
       const { data } =
-        await labelerAgent.api.chat.bsky.moderation.getMessageContext({
+        await labelerAgent.api.chat.gndr.moderation.getMessageContext({
           messageId,
         })
       return data.messages

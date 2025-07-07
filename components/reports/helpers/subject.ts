@@ -92,12 +92,12 @@ export const useCreateSubjectFromId = () => {
 }
 
 export enum CollectionId {
-  FeedGenerator = 'app.bsky.feed.generator',
-  Profile = 'app.bsky.actor.profile',
-  List = 'app.bsky.graph.list',
-  Post = 'app.bsky.feed.post',
-  LabelerService = 'app.bsky.labeler.service',
-  StarterPack = 'app.bsky.graph.starterpack',
+  FeedGenerator = 'app.gndr.feed.generator',
+  Profile = 'app.gndr.actor.profile',
+  List = 'app.gndr.graph.list',
+  Post = 'app.gndr.feed.post',
+  LabelerService = 'app.gndr.labeler.service',
+  StarterPack = 'app.gndr.graph.starterpack',
 }
 export const getProfileUriForDid = (did: string) =>
   `at://${did}/${CollectionId.Profile}/self`
@@ -122,7 +122,7 @@ export const getCollectionName = (collection: string) => {
     return 'Starter Pack'
   }
   // If the collection is a string with ., use the last two segments as the title
-  // so app.bsky.graph.list -> graph list
+  // so app.gndr.graph.list -> graph list
   if (collection.includes('.')) {
     return collection.split('.').slice(-2).join(' ')
   }

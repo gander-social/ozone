@@ -10,7 +10,7 @@ export function Follows({ id, count }: { id: string; count?: number }) {
     useInfiniteQuery({
       queryKey: ['follows', { id }],
       queryFn: async ({ pageParam }) => {
-        const { data } = await labelerAgent.app.bsky.graph.getFollows({
+        const { data } = await labelerAgent.app.gndr.graph.getFollows({
           actor: id,
           cursor: pageParam,
         })

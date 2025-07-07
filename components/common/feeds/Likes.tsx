@@ -9,7 +9,7 @@ const useLikes = (pdsAgent: Agent, uri: string, cid?: string) => {
   return useInfiniteQuery({
     queryKey: ['likes', { uri, cid }],
     queryFn: async ({ pageParam }) => {
-      const { data } = await pdsAgent.app.bsky.feed.getLikes({
+      const { data } = await pdsAgent.app.gndr.feed.getLikes({
         uri,
         cid,
         limit: 50,

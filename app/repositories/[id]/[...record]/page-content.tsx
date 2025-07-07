@@ -92,7 +92,7 @@ export default function RecordViewPageContent({
         }
         try {
           const { data: thread } =
-            await labelerAgent.app.bsky.feed.getPostThread({ uri })
+            await labelerAgent.app.gndr.feed.getPostThread({ uri })
           return thread
         } catch (err) {
           if (err instanceof GetPostThread.NotFoundError) {
@@ -105,7 +105,7 @@ export default function RecordViewPageContent({
         if (collection !== CollectionId.List) {
           return undefined
         }
-        const { data } = await labelerAgent.app.bsky.graph.getList({
+        const { data } = await labelerAgent.app.gndr.graph.getList({
           list: uri,
         })
         return data

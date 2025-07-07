@@ -21,7 +21,7 @@ export function Blocks({ did }: { did: string }) {
     useInfiniteQuery({
       queryKey: ['blocks', { did }],
       queryFn: async ({ pageParam }) => {
-        const data = await listRecords(did, 'app.bsky.graph.block', {
+        const data = await listRecords(did, 'app.gndr.graph.block', {
           cursor: pageParam,
         })
         const actors = data.records.map(
@@ -57,7 +57,7 @@ export function Blocks({ did }: { did: string }) {
       do {
         const data = await listRecords(
           did,
-          'app.bsky.graph.block',
+          'app.gndr.graph.block',
           { cursor },
           { signal: abortController.current?.signal },
         )

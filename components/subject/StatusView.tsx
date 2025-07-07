@@ -30,7 +30,7 @@ export const SubjectStatusView = ({
 
   const shortType = ComAtprotoRepoStrongRef.isMain(subjectStatus.subject)
     ? new AtUri(`${subjectStatus.subject.uri}`).collection.replace(
-        'app.bsky.feed.',
+        'app.gndr.feed.',
         '',
       )
     : null

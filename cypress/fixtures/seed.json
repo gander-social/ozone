@@ -5,7 +5,7 @@
                   "handle":"carla.test",
                   "relatedRecords":[
                       {
-                          "$type":"app.bsky.actor.profile",
+                          "$type":"app.gndr.actor.profile",
                           "description":"Test user 3",
                           "displayName":"Carla"
                       }
@@ -51,10 +51,10 @@
                   "invites":[]
             },
             "multiCidLabeledProfile": {
-              "uri": "at://did:plc:jttgywq7eusytkmurmjbum6h/app.bsky.actor.profile/self",
+              "uri": "at://did:plc:jttgywq7eusytkmurmjbum6h/app.gndr.actor.profile/self",
               "cid": "bafyreifar3ib273ksyfwp4faluaj32aahuc6u2pdnxaygzbkqdhrjejhhi",
               "value": {
-                "$type": "app.bsky.actor.profile",
+                "$type": "app.gndr.actor.profile",
                 "avatar": {
                   "$type": "blob",
                   "ref": {
@@ -82,10 +82,10 @@
               "indexedAt": "2024-07-25T13:19:34.590Z",
               "repo": {
                 "did": "did:plc:2v35ogs66lbko6no55up2j3y",
-                "handle": "barefootbrat.bsky.social",
+                "handle": "barefootbrat.gndr.social",
                 "relatedRecords": [
                   {
-                    "$type": "app.bsky.actor.profile",
+                    "$type": "app.gndr.actor.profile",
                     "avatar": {
                       "$type": "blob",
                       "ref": {
@@ -124,7 +124,7 @@
                   "tags": [],
                   "subject": {
                     "$type": "com.atproto.repo.strongRef",
-                    "uri": "at://did:plc:jttgywq7eusytkmurmjbum6h/app.bsky.actor.profile/self",
+                    "uri": "at://did:plc:jttgywq7eusytkmurmjbum6h/app.gndr.actor.profile/self",
                     "cid": "bafyreifar3ib273ksyfwp4faluaj32aahuc6u2pdnxaygzbkqdhrjejhhi"
                   }
                 }
@@ -149,7 +149,7 @@
                 {
                   "ver": 1,
                   "src": "did:plc:ar7c4by46qjdydhdevvrndac",
-                  "uri": "at://did:plc:jttgywq7eusytkmurmjbum6h/app.bsky.actor.profile/self",
+                  "uri": "at://did:plc:jttgywq7eusytkmurmjbum6h/app.gndr.actor.profile/self",
                   "cid": "bafyreifar3ib273ksyfwp4faluaj32aahuc6u2pdnxaygzbkqdhrjejhhi",
                   "val": "porn",
                   "cts": "2024-07-25T13:18:48.623Z",
@@ -161,7 +161,7 @@
                 {
                   "ver": 1,
                   "src": "did:plc:ar7c4by46qjdydhdevvrndac",
-                  "uri": "at://did:plc:jttgywq7eusytkmurmjbum6h/app.bsky.actor.profile/self",
+                  "uri": "at://did:plc:jttgywq7eusytkmurmjbum6h/app.gndr.actor.profile/self",
                   "cid": "bafyreifar3ib273xczfwp4faluaj32aahuc6u2pdnxaygzbkqdhrjejhhi",
                   "val": "porn",
                   "cts": "2024-07-25T13:18:48.623Z",

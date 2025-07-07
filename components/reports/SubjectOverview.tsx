@@ -94,7 +94,7 @@ export function SubjectOverview(props: {
   }
 
   if (summary.collection) {
-    const shortCollection = summary.collection.replace('app.bsky.feed.', '')
+    const shortCollection = summary.collection.replace('app.gndr.feed.', '')
     const repoText = subjectRepoHandle
       ? `@${subjectRepoHandle}`
       : truncate(summary.did, withTruncation ? 16 : Infinity)

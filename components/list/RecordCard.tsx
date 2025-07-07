@@ -12,7 +12,7 @@ export const ListRecordCard = ({ uri }: { uri: string }) => {
     retry: false,
     queryKey: ['list', { uri }],
     queryFn: async () => {
-      const { data } = await labelerAgent.api.app.bsky.graph.getList({
+      const { data } = await labelerAgent.api.app.gndr.graph.getList({
         list: uri,
         limit: 1,
       })

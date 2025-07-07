@@ -1002,7 +1002,7 @@ function useSubjectQuery(subject: string) {
 
   const getProfile = async (actor: string) => {
     try {
-      const { data: profile } = await labelerAgent.app.bsky.actor.getProfile({
+      const { data: profile } = await labelerAgent.app.gndr.actor.getProfile({
         actor,
       })
       return profile

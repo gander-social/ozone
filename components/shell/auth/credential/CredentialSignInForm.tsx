@@ -27,7 +27,7 @@ export function CredentialSignInForm({
 
   const [handle, setHandle] = useState('')
   const [password, setPassword] = useState('')
-  const [service, setService] = useState('https://bsky.social')
+  const [service, setService] = useState('https://gndr.social')
   const [authFactor, setAuthFactor] = useState<{
     token: string
     isInvalid: boolean
@@ -107,8 +107,8 @@ export function CredentialSignInForm({
             onChange={(e) => setService(e.target.value)}
           />
           <datalist id="service-url-suggestions">
-            <option value="https://bsky.social" />
-            <option value="https://staging.bsky.dev" />
+            <option value="https://gndr.social" />
+            <option value="https://staging.gndr.dev" />
           </datalist>
         </div>
         <div>

@@ -135,7 +135,7 @@ export function MemberEditor({
               className="block w-full"
               value={member?.did}
               disabled={!!member || submission.isSubmitting}
-              placeholder="member.bsky.social or did:plc:...."
+              placeholder="member.gndr.social or did:plc:...."
             />
           </FormLabel>
         </div>

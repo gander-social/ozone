@@ -20,7 +20,7 @@ export function Lists({ actor }: { actor: string }) {
   const { data, isLoading } = useInfiniteQuery({
     queryKey: ['lists', { actor }],
     queryFn: async ({ pageParam }) => {
-      const { data } = await labelerAgent.app.bsky.graph.getLists({
+      const { data } = await labelerAgent.app.gndr.graph.getLists({
         actor,
         limit: 25,
         cursor: pageParam,
@@ -47,7 +47,7 @@ export function Lists({ actor }: { actor: string }) {
     try {
       let cursor = data.pageParams[0] as string | undefined
       do {
-        const nextLists = await labelerAgent.app.bsky.graph.getLists(
+        const nextLists = await labelerAgent.app.gndr.graph.getLists(
           {
             actor,
             limit: 25,

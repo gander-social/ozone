@@ -101,7 +101,7 @@ export function getServiceUrlFromDoc(
 async function getLabelerServiceRecord(pdsUrl: string, did: string) {
   const url = new URL('/xrpc/com.atproto.repo.getRecord', pdsUrl)
   url.searchParams.set('repo', did)
-  url.searchParams.set('collection', 'app.bsky.labeler.service')
+  url.searchParams.set('collection', 'app.gndr.labeler.service')
   url.searchParams.set('rkey', 'self')
   const res = await fetch(url)
   if (res.status !== 200) return null

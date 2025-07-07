@@ -119,7 +119,7 @@ export const WORKSPACE_EXPORT_FIELDS = [
   'name',
   'labels',
   'tags',
-  'bskyUrl',
+  'gndrUrl',
 ]
 export const ADMIN_ONLY_WORKSPACE_EXPORT_FIELDS = ['email', 'ip']
 const filterExportFields = (fields: string[], isAdmin: boolean) => {
@@ -146,7 +146,7 @@ const getExportFieldsFromWorkspaceListItem = (
       ip: 'Unknown',
       name: profile?.displayName || '',
       tags: repo.moderation.subjectStatus?.tags?.join('|'),
-      bskyUrl: buildBlueSkyAppUrl({ did: repo.did }),
+      gndrUrl: buildBlueSkyAppUrl({ did: repo.did }),
       // @ts-expect-error - Un-spec'd field returned by PDS
       ip: ifString(repo.ip) ?? 'Unknown',
       labels: repo.labels?.map(({ val }) => val).join('|') || 'Unknown',

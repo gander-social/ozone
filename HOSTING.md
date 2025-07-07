@@ -9,7 +9,7 @@ Self-hosting Ozone enables you to participate as a labeler in Bluesky's system f
 > [!IMPORTANT]
 > Before setting up your Ozone service you should create a _new_ account on the network, separate from your main account. This is the account that subscribers to your labeler will interact with: accounts for labelers appear different in Bluesky than normal accounts.
 
-You can create a new service account for your labeler at [bsky.app](https://bsky.app/).
+You can create a new service account for your labeler at [gndr.app](https://gndr.app/).
 
 #### Launch a server
 
@@ -66,7 +66,7 @@ From your DNS provider's control panel, set up a domain with records pointing to
 - The TTL can be anything but 600 (10 minutes) is reasonable
 
 > [!TIP]
-> Since you have your own domain, you may consider using it to setup a [custom handle](https://bsky.social/about/blog/4-28-2023-domain-handle-tutorial) for the new labeler account you created in step 1. This helps users verify who operates your labeler, and makes it more difficult to impersonate your labeler. It also just looks nice!
+> Since you have your own domain, you may consider using it to setup a [custom handle](https://gndr.social/about/blog/4-28-2023-domain-handle-tutorial) for the new labeler account you created in step 1. This helps users verify who operates your labeler, and makes it more difficult to impersonate your labeler. It also just looks nice!
 
 ### Check that DNS is working as expected
 
@@ -199,7 +199,7 @@ Your Ozone instance will need a secp256k1 private key used to sign labels provid
 
 ```bash
 OZONE_HOSTNAME="ozone.example.com"
-OZONE_SERVICE_ACCOUNT_HANDLE="mylabeler.bsky.social"
+OZONE_SERVICE_ACCOUNT_HANDLE="mylabeler.gndr.social"
 OZONE_SERVER_DID="$(curl --fail --silent --show-error "https://api.bsky.app/xrpc/com.atproto.identity.resolveHandle?handle=${OZONE_SERVICE_ACCOUNT_HANDLE}" | jq --raw-output .did)"
 OZONE_ADMIN_PASSWORD="$(openssl rand --hex 16)"
 OZONE_SIGNING_KEY_HEX="$(openssl ecparam --name secp256k1 --genkey --noout --outform DER | tail --bytes=+8 | head --bytes=32 | xxd --plain --cols 32)"
@@ -232,7 +232,7 @@ Download the `compose.yaml` to run your Ozone instance, which includes the follo
 - `watchtower` Daemon responsible for auto-updating containers to keep the server secure and current
 
 ```bash
-curl https://raw.githubusercontent.com/bluesky-social/ozone/main/service/compose.yaml | sudo tee /ozone/compose.yaml
+curl https://raw.githubusercontent.com/gander-social/ozone/main/service/compose.yaml | sudo tee /ozone/compose.yaml
 ```
 
 ##### Create the systemd service
@@ -241,7 +241,7 @@ curl https://raw.githubusercontent.com/bluesky-social/ozone/main/service/compose
 cat <<SYSTEMD_UNIT_FILE | sudo tee /etc/systemd/system/ozone.service
 [Unit]
 Description=Bluesky Ozone Service
-Documentation=https://github.com/bluesky-social/ozone
+Documentation=https://github.com/gander-social/ozone
 Requires=docker.service
 After=docker.service
 
@@ -323,7 +323,7 @@ If you use use Docker `compose.yaml` file in this repo, Ozone will automatically
 **Pull the latest Ozone container image:**
 
 ```bash
-sudo docker pull ghcr.io/bluesky-social/ozone:latest
+sudo docker pull ghcr.io/gander-social/ozone:latest
 ```
 
 **Restart Ozone with the new container image:**
@@ -352,4 +352,4 @@ You will need to customize various settings configured through the Ozone environ
 
 There are additional environment variables that can be tweaked depending on how you're running your service, particularly if another service on the network allows delegates some control to your Ozone instance, e.g. to prompt them to purge certain content.
 
-Feel free to explore those [here](https://github.com/bluesky-social/atproto/blob/main/packages/ozone/src/config/env.ts). However, we will not be providing support for more advanced configurations at this time.
+Feel free to explore those [here](https://github.com/gander-social/atproto/blob/main/packages/ozone/src/config/env.ts). However, we will not be providing support for more advanced configurations at this time.

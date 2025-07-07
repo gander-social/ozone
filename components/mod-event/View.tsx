@@ -30,7 +30,7 @@ export function EventView({ event }: { event: GetEvent.OutputSchema }) {
 
   const eventSubjectValue =
     ToolsOzoneModerationDefs.isRecordView(event.subject) && event.subject.value
-  const shortType = getType(eventSubjectValue).replace('app.bsky.feed.', '')
+  const shortType = getType(eventSubjectValue).replace('app.gndr.feed.', '')
   const subHeaderTitle = ToolsOzoneModerationDefs.isRecordView(event.subject)
     ? `${shortType} record of @${event.subject.repo.handle}`
     : ToolsOzoneModerationDefs.isRepoView(event.subject)

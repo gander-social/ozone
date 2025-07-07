@@ -9,7 +9,7 @@ const useReposts = (uri: string, cid?: string) => {
   return useInfiniteQuery({
     queryKey: ['reposts', { uri, cid }],
     queryFn: async ({ pageParam }) => {
-      const { data } = await pdsAgent.api.app.bsky.feed.getRepostedBy({
+      const { data } = await pdsAgent.api.app.gndr.feed.getRepostedBy({
         uri,
         cid,
         limit: 50,

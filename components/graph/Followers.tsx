@@ -10,7 +10,7 @@ export function Followers({ id, count }: { id: string; count?: number }) {
     useInfiniteQuery({
       queryKey: ['followers', { id }],
       queryFn: async ({ pageParam }) => {
-        const { data } = await labelerAgent.api.app.bsky.graph.getFollowers({
+        const { data } = await labelerAgent.api.app.gndr.graph.getFollowers({
           actor: id,
           cursor: pageParam,
         })

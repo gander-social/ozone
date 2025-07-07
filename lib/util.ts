@@ -57,7 +57,7 @@ export function takesKeyboardEvt(el?: EventTarget | null) {
   )
 }
 
-const blueSkyUrlMatcher = new RegExp('(https?://)?.*bsky.app')
+const blueSkyUrlMatcher = new RegExp('(https?://)?.*gndr.app')
 
 export const isBlueSkyAppUrl = (url: string) => blueSkyUrlMatcher.test(url)
 

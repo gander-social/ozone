@@ -84,7 +84,7 @@ const LabelerConfigDescription = () => {
             <b>
               <code>subjectCollections</code>
             </b>
-            : such as `app.bsky.feed.post`, specifying the types of records that
+            : such as `app.gndr.feed.post`, specifying the types of records that
             can be reported by users.
           </li>
           <li>
@@ -203,13 +203,13 @@ function RecordInitStep({ repo }: { repo: string }) {
     mutationFn: async () => {
       await pdsAgent.api.com.atproto.repo.putRecord({
         repo,
-        collection: 'app.bsky.labeler.service',
+        collection: 'app.gndr.labeler.service',
         rkey: 'self',
         record: {
           createdAt: new Date().toISOString(),
           policies: { labelValues: [] },
           subjectTypes: ['account', 'record'],
-          subjectCollections: ['app.bsky.feed.post', 'app.bsky.actor.profile'],
+          subjectCollections: ['app.gndr.feed.post', 'app.gndr.actor.profile'],
           reasonTypes: [
             'com.atproto.moderation.defs#reasonSpam',
             'com.atproto.moderation.defs#reasonMisleading',
@@ -248,7 +248,7 @@ function RecordInitStep({ repo }: { repo: string }) {
             <>
               I have read the{' '}
               <Link
-                href="https://bsky.social/about/support/community-guidelines#labeler"
+                href="https://gndr.social/about/support/community-guidelines#labeler"
                 target="_blank"
                 className="text-blue-500"
               >
@@ -287,7 +287,7 @@ function RecordEditStep({
     mutationFn: async () => {
       await pdsAgent.api.com.atproto.repo.putRecord({
         repo,
-        collection: 'app.bsky.labeler.service',
+        collection: 'app.gndr.labeler.service',
         rkey: 'self',
         record: recordVal,
       })

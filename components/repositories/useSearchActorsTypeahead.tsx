@@ -11,7 +11,7 @@ export const useSearchActorsTypeahead = (query: string) => {
       // don't make request for empty query string
       if (!q) return []
       const { data } =
-        await labelerAgent.api.app.bsky.actor.searchActorsTypeahead({ q })
+        await labelerAgent.api.app.gndr.actor.searchActorsTypeahead({ q })
       return data.actors
     },
   })

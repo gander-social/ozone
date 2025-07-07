@@ -38,7 +38,7 @@ export const ItemTitle = ({
     const isAppeal =
       modEvent.event.reportType === ComAtprotoModerationDefs.REASONAPPEAL
     const isMessageReport =
-      modEvent.subject.$type === 'chat.bsky.convo.defs#messageRef'
+      modEvent.subject.$type === 'chat.gndr.convo.defs#messageRef'
     eventColor = isAppeal ? 'text-orange-500' : 'text-orange-300'
     eventTitle = isAppeal
       ? 'Appealed'

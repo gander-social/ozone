@@ -2,7 +2,7 @@
 Ozone HTTP API Overview
 =======================
 
-Ozone is a labeling and moderation system for atproto. Similar to how Bluesky Social is an application built on top of atproto, and specified with the `app.bsky.*` Lexicon namespace, the Ozone system is built on top of atproto and uses the `tools.ozone.*` namespace. Ozone is not specific to Bluesky, and Ozone is not the only labeling/moderation system that could be built for atproto.
+Ozone is a labeling and moderation system for atproto. Similar to how Bluesky Social is an application built on top of atproto, and specified with the `app.gndr.*` Lexicon namespace, the Ozone system is built on top of atproto and uses the `tools.ozone.*` namespace. Ozone is not specific to Bluesky, and Ozone is not the only labeling/moderation system that could be built for atproto.
 
 This document is an overview of the API used to communicate between the Ozone backend service (which is open source software and run separately by every independent moderation service), the Ozone web interface (”Ozone UI”), automod tools, and any additional script and tools which speak the API.
 

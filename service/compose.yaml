@@ -19,7 +19,7 @@ services:
       - 'com.centurylinklabs.watchtower.enable=true'
   ozone:
     container_name: ozone
-    image: ghcr.io/bluesky-social/ozone:0.1
+    image: ghcr.io/gander-social/ozone:0.1
     network_mode: host
     restart: unless-stopped
     depends_on:

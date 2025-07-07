@@ -215,7 +215,7 @@ function Header({
 }) {
   const collection = parseAtUri(record.uri)?.collection ?? ''
   let shortCollection = collection
-    .replace('app.bsky.feed.', '')
+    .replace('app.gndr.feed.', '')
     .replace('app.bsky.graph.', '')
   if (shortCollection === 'generator') shortCollection = 'feed generator'
   const { subjectStatus } = record.moderation

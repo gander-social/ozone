@@ -1,4 +1,4 @@
-# Ozone: labeling service for Bluesky and other atproto apps
+# Ozone: labeling service for Bluesky, Gander and other atproto apps
 
 ![ozone web interface screenshot](./docs/ozone_ui.png)
 
@@ -11,7 +11,7 @@ Features:
 - creating and modifying labels on content and accounts
 - viewing invite trees and disabling invite generation
 - sending moderation emails, based on templates
-- browsing app.bsky profiles and post threads, including some taken-down content
+- browsing app.gndr profiles and post threads, including some taken-down content
 - quick-action modal (Ctrl-K)
 
 See [User Guide](./docs/userguide.md) for a quick introduction for users of the interface.
@@ -49,7 +49,7 @@ See [HACKING](./HACKING.md) for other development tricks, like development with 
 
 We offer a Dockerized setup for hosting both the Ozone UI and backend together. This allows you to run an Ozone labeler service on the network, which users of the Bluesky application can discover and opt into. There are a few requirements to get this setup:
 
-1. Create a "service account" for your labeler. This is the account that users will discover in the application, allowing them to subscribe to your labeler. You should _not_ use your personal account as an Ozone labeler service account. It can be created on [bsky.app](https://bsky.app) just like a typical account.
+1. Create a "service account" for your labeler. This is the account that users will discover in the application, allowing them to subscribe to your labeler. You should _not_ use your personal account as an Ozone labeler service account. It can be created on [gndr.app](https://gndr.app) just like a typical account.
 2. Start running the Ozone UI and backend on the public internet. The service only relies on Postgres, and is generally quite cheap and easy to run. It should be served over https at a domain that you own.
 3. Associate your Ozone labeler service with your service account, and announce it to the network. Your Ozone UI will help you with this if you login to Ozone using your service account.
 
@@ -72,7 +72,7 @@ This process is outlined in detail within [HOSTING.md](./HOSTING.md).
 - Open an issue and give some time for discussion before submitting a PR.
 - If submitting a PR that includes a lexicon change, please get sign off on the lexicon change _before_ doing the implementation.
 - Issues are for bugs & feature requests related to the TypeScript implementation of atproto and related services.
-  - For high-level discussions, please use the [Discussion Forum](https://github.com/bluesky-social/atproto/discussions).
+  - For high-level discussions, please use the [Discussion Forum](https://github.com/gander-social/atproto/discussions).
 - Stay away from PRs that:
   - Refactor large parts of the codebase
   - Add entirely new features without prior discussion
@@ -83,14 +83,14 @@ Remember, we serve a wide community of users. Our day-to-day involves us constan
 
 ## Security disclosures
 
-If you discover any security issues, please send an email to security@bsky.app. The email is automatically CCed to the entire team, and we'll respond promptly. See [SECURITY.md](https://github.com/bluesky-social/atproto/blob/main/SECURITY.md) for more info.
+If you discover any security issues, please send an email to security@gndr.app. The email is automatically CCed to the entire team, and we'll respond promptly. See [SECURITY.md](https://github.com/gander-social/atproto/blob/main/SECURITY.md) for more info.
 
 ## License
 
 This project is dual-licensed under MIT and Apache 2.0 terms:
 
-- MIT license ([LICENSE-MIT](https://github.com/bluesky-social/ozone/blob/main/LICENSE-MIT) or <http://opensource.org/licenses/MIT>)
-- Apache License, Version 2.0, ([LICENSE-APACHE](https://github.com/bluesky-social/ozone/blob/main/LICENSE-APACHE) or <http://www.apache.org/licenses/LICENSE-2.0>)
+- MIT license ([LICENSE-MIT](https://github.com/gander-social/ozone/blob/main/LICENSE-MIT) or <http://opensource.org/licenses/MIT>)
+- Apache License, Version 2.0, ([LICENSE-APACHE](https://github.com/gander-social/ozone/blob/main/LICENSE-APACHE) or <http://www.apache.org/licenses/LICENSE-2.0>)
 
 Downstream projects and end users may chose either license individually, or both together, at their discretion. The motivation for this dual-licensing is the additional software patent assurance provided by Apache 2.0.
 

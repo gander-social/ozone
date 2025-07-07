@@ -12,7 +12,7 @@ export const StarterPackRecordCard = ({ uri }: { uri: string }) => {
     retry: false,
     queryKey: ['starterpack', uri],
     queryFn: async () => {
-      const { data } = await lablerAgent.api.app.bsky.graph.getStarterPack({
+      const { data } = await lablerAgent.api.app.gndr.graph.getStarterPack({
         starterPack: uri,
       })
       return data

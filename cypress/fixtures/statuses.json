@@ -43,7 +43,7 @@
                         "subject": {
                               "$type": "com.atproto.repo.strongRef",
                               "cid": "bafyreifhjkivvt2r3bpqljq47r2pnouznn4beo2rtxxz6t2z2humv5hege",
-                              "uri": "at://did:plc:jttgywq7eusytkmurmjbum6h/app.bsky.actor.profile/self"
+                              "uri": "at://did:plc:jttgywq7eusytkmurmjbum6h/app.gndr.actor.profile/self"
                         }
                   }
             ]

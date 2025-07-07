@@ -27,7 +27,7 @@ export const useMessageActorMeta = ({
     queryKey: ['messageActorMeta', { did }],
     queryFn: async () => {
       const { data } =
-        await labelerAgent.api.chat.bsky.moderation.getActorMetadata({
+        await labelerAgent.api.chat.gndr.moderation.getActorMetadata({
           actor: did,
         })
 

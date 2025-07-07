@@ -5,7 +5,7 @@ import { deepCopy } from '../../support/utils'
 import { LabelerRecordView } from '../../../components/labeler/RecordView'
 
 const basicLabelerRecord: AppBskyLabelerService.Record = {
-  $type: 'app.bsky.labeler.service',
+  $type: 'app.gndr.labeler.service',
   policies: {
     labelValues: [],
   },

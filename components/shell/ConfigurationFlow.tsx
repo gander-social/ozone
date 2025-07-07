@@ -434,7 +434,7 @@ function RecordConfigurationFlow({
             <>
               I have read the{' '}
               <Link
-                href="https://bsky.social/about/support/community-guidelines#labeler"
+                href="https://gndr.social/about/support/community-guidelines#labeler"
                 target="_blank"
                 className="text-blue-500"
               >

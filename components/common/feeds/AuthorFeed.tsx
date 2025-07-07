@@ -30,7 +30,7 @@ export const useAuthorFeedQuery = ({
       let isFromAppview = false
       const searchPosts = query.length && repoData?.repo?.handle
       if (searchPosts) {
-        const { data } = await labelerAgent.app.bsky.feed.searchPosts({
+        const { data } = await labelerAgent.app.gndr.feed.searchPosts({
           q: `from:${repoData?.repo?.handle} ${query}`,
           limit: 30,
           cursor: pageParam,
@@ -64,11 +64,11 @@ export const useAuthorFeedQuery = ({
         try {
           if (isFromAppview && appviewAgent) {
             const authorFeedThroughAppview =
-              await appviewAgent.app.bsky.feed.getAuthorFeed(authorFeedParams)
+              await appviewAgent.app.gndr.feed.getAuthorFeed(authorFeedParams)
             data = authorFeedThroughAppview.data
           } else {
             const authorFeedThroughOzone =
-              await labelerAgent.app.bsky.feed.getAuthorFeed(authorFeedParams)
+              await labelerAgent.app.gndr.feed.getAuthorFeed(authorFeedParams)
             data = authorFeedThroughOzone.data
           }
         } catch (e) {
@@ -77,7 +77,7 @@ export const useAuthorFeedQuery = ({
             appviewAgent
           ) {
             const authorFeedThroughAppview =
-              await appviewAgent.app.bsky.feed.getAuthorFeed(authorFeedParams)
+              await appviewAgent.app.gndr.feed.getAuthorFeed(authorFeedParams)
             data = authorFeedThroughAppview.data
             if (!isFromAppview) isFromAppview = true
           } else {

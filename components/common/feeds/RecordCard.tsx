@@ -11,7 +11,7 @@ export const FeedGeneratorRecordCard = ({ uri }: { uri: string }) => {
     retry: false,
     queryKey: ['feed-generator', { uri }],
     queryFn: async () => {
-      const { data } = await labelerAgent.api.app.bsky.feed.getFeedGenerator({
+      const { data } = await labelerAgent.api.app.gndr.feed.getFeedGenerator({
         feed: uri,
       })
       return data

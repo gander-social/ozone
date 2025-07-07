@@ -54,7 +54,7 @@ export const CommandPaletteRoot = ({
         <KBarPositioner className="p-2 bg-gray-900/80 flex items-center pb-4 z-50">
           <KBarAnimator className="w-full md:w-2/3 lg:w-1/2 w-max-[600px] overflow-hidden p-2 bg-white dark:bg-slate-800 rounded-xl">
             <KBarSearch
-              defaultPlaceholder="Search by DID, bsky url or handle"
+              defaultPlaceholder="Search by DID, gndr url or handle"
               className="flex px-4 w-full h-16 outline-none dark:bg-slate-800 dark:text-gray-100"
             />
             <SearchResults />

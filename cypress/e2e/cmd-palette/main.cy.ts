@@ -20,8 +20,8 @@ describe('Command Palette', () => {
     )
 
   let authFixture
-  const bskyPostUrlWithHandle =
-    'https://bsky.app/profile/alice.test/post/3kozf56ocx32a'
+  const gndrPostUrlWithHandle =
+    'https://gndr.app/profile/alice.test/post/3kozf56ocx32a'
 
   beforeEach(() => {
     cy.visit('http://127.0.0.1:3000')
@@ -39,21 +39,21 @@ describe('Command Palette', () => {
     })
   })
 
-  it('Shows post options from bsky app post url', () => {
+  it('Shows post options from gndr app post url', () => {
     cy.wait(500)
-    cy.openCommandPalette(bskyPostUrlWithHandle)
+    cy.openCommandPalette(gndrPostUrlWithHandle)
     cy.get('#kbar-listbox-item-1').contains('Take action on Post').click()
     cy.wait(500)
     cy.location('href').then((href) => {
       expect(decodeURIComponent(href)).to.include(
-        `quickOpen=at://did:plc:56ud7t6bqdkwblmzwmkcetst/app.bsky.feed.post/3kozf56ocx32a`,
+        `quickOpen=at://did:plc:56ud7t6bqdkwblmzwmkcetst/app.gndr.feed.post/3kozf56ocx32a`,
       )
     })
   })
 
-  it('Shows user options from bsky app post url', () => {
+  it('Shows user options from gndr app post url', () => {
     cy.wait(500)
-    cy.openCommandPalette(bskyPostUrlWithHandle)
+    cy.openCommandPalette(gndrPostUrlWithHandle)
     cy.get('#kbar-listbox-item-2').contains('Take action on alice.test').click()
     cy.wait(500)
     cy.location('href').then((href) => {

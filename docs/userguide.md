@@ -10,7 +10,7 @@ Individual users log in to the web interface using an atproto account, with thei
 
 Once successfully logged in, users will be presented with a queue of un-reviewed reports. Other queues show *escalated* reports and *resolved* reports. Clicking the "Take Action" link in the upper-right will open an action panel, which displays a single reported subject on the left side, historical events and actions on the right side, and allow taking actions like commenting (private to the Ozone system), or adding or removing labels.
 
-A common way to browse the Ozone system is using the "Ctrl Panel". There is a link on the left bar, or you can press Ctrl-K at any time to pop up this quick panel, and paste in a handle, bsky.app URL, or other identifier. You can then quickly access reports, profile metadata, or other views related to the subject. An account profile view displays metadata like public DID PLC history (e.g., account originally registered), recent posts, and history of reports and other events both created by the account and for the account and it's content.
+A common way to browse the Ozone system is using the "Ctrl Panel". There is a link on the left bar, or you can press Ctrl-K at any time to pop up this quick panel, and paste in a handle, gndr.app URL, or other identifier. You can then quickly access reports, profile metadata, or other views related to the subject. An account profile view displays metadata like public DID PLC history (e.g., account originally registered), recent posts, and history of reports and other events both created by the account and for the account and it's content.
 
 ## Concepts
 

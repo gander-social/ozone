@@ -37,7 +37,7 @@ export const getProfiles = async (agent: Agent, dids?: string[]) => {
 
   for (const chunk of chunkArray(dids, 25)) {
     try {
-      const { data } = await agent.app.bsky.actor.getProfiles({
+      const { data } = await agent.app.gndr.actor.getProfiles({
         actors: chunk,
       })
 

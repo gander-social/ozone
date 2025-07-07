@@ -121,7 +121,7 @@ export const ConfigurationProvider = ({
           createRecord={async () => {
             await pdsAgent.com.atproto.repo.putRecord({
               repo: config!.did,
-              collection: 'app.bsky.labeler.service',
+              collection: 'app.gndr.labeler.service',
               rkey: 'self',
               record: {
                 createdAt: new Date().toISOString(),

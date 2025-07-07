@@ -106,7 +106,7 @@ function PostCard({
     retry: false,
     queryKey: ['postCard', { uri }],
     queryFn: async () => {
-      const { data: post } = await labelerAgent.app.bsky.feed.getPostThread({
+      const { data: post } = await labelerAgent.app.gndr.feed.getPostThread({
         uri,
         depth: 0,
       })
@@ -152,7 +152,7 @@ function PostCard({
                     ...author,
                     avatar: undefined,
                     labels: [],
-                    $type: 'app.bsky.actor.defs#profileViewBasic',
+                    $type: 'app.gndr.actor.defs#profileViewBasic',
                   },
                   labels,
                   uri: record.uri,
@@ -255,7 +255,7 @@ const useRepoAndProfile = ({ did }: { did: string }) => {
       const getProfile = async () => {
         try {
           const { data: profile } =
-            await labelerAgent.app.bsky.actor.getProfile({
+            await labelerAgent.app.gndr.actor.getProfile({
               actor: did,
             })
           return profile

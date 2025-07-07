@@ -42,7 +42,7 @@ const getProfilesForQuery = async (
   q: string,
 ): Promise<TypeaheadResult[]> => {
   if (q.startsWith('did:')) {
-    const { data: profile } = await agent.app.bsky.actor.getProfile({
+    const { data: profile } = await agent.app.gndr.actor.getProfile({
       actor: q,
     })
 

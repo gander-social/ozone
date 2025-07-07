@@ -24,7 +24,7 @@ const useListAccounts = ({ uri }: ListAccountsProps) => {
     useInfiniteQuery({
       queryKey: ['list-accounts', { uri }],
       queryFn: async ({ pageParam }) => {
-        const { data } = await labelerAgent.app.bsky.graph.getList({
+        const { data } = await labelerAgent.app.gndr.graph.getList({
           list: uri,
           limit: 50,
           cursor: pageParam,
@@ -54,7 +54,7 @@ const useListAccounts = ({ uri }: ListAccountsProps) => {
     try {
       let cursor = data.pageParams[0] as string | undefined
       do {
-        const netItems = await labelerAgent.app.bsky.graph.getList(
+        const netItems = await labelerAgent.app.gndr.graph.getList(
           {
             list: uri,
             cursor,
